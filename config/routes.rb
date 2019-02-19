@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'black_fridays#index'
   resources :black_fridays
   resources :homes
   resources :pples
