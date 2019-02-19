@@ -1,0 +1,96 @@
+<%= form_with(model: black_friday, local: true) do |form| %>
+  <% if black_friday.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(black_friday.errors.count, "error") %> prohibited this black_friday from being saved:</h2>
+
+      <ul>
+      <% black_friday.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <%= form.label :user_id %>
+          <%= form.text_field :user_id %>
+        </div>
+        <div class="input-field col s6">
+          <%= form.label :product_id %>
+          <%= form.text_field :product_id %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <%= form.label :gender %>
+          <%= form.text_field :gender %>
+        </div>
+        <div class="input-field col s6">
+          <%= form.label :age %>
+          <%= form.number_field :age %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <%= form.label :city_category %>
+          <%= form.text_field :city_category %>
+        </div>
+        <div class="input-field col s6">
+          <%= form.label :stay_in_current_city_years %>
+          <%= form.text_field :stay_in_current_city_years %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <%= form.label :marital_status %>
+          <%= form.text_field :marital_status %>
+        </div>
+        <div class="input-field col s6">
+          <%= form.label :purchase %>
+          <%= form.text_field :purchase %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s3">
+          <%= form.label :product_category_1 %>
+          <%= form.text_field :product_category_1 %>
+        </div>
+        <div class="input-field col s3">
+          <%= form.label :product_category_2 %>
+          <%= form.text_field :product_category_2 %>
+        </div>
+        <div class="input-field col s3">
+          <%= form.label :product_category_3 %>
+          <%= form.text_field :product_category_3 %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <%= form.label :marital_status %>
+          <%= form.text_field :marital_status %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= form.label :occupation %>
+          <%= form.text_field :occupation %>
+        </div>
+      </div>
+
+      </div>
+    </form>
+  </div>
+
+  <div class="actions container">
+    <%= form.submit class: "waves-effect waves-light btn" %>
+  </div>
+
+<% end %>
+
+<%= javascript_tag do %>
+  M.updateTextFields();
+<% end %>

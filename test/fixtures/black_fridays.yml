@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  product_id: MyString
+  gender: MyString
+  age: 1
+  occupation: MyString
+  city_category: MyString
+  stay_in_current_city_years: MyString
+  marital_status: MyString
+  product_category_1: MyString
+  product_category_2: MyString
+  product_category_3: MyString
+  purchase: MyString
+
+two:
+  user_id: MyString
+  product_id: MyString
+  gender: MyString
+  age: 1
+  occupation: MyString
+  city_category: MyString
+  stay_in_current_city_years: MyString
+  marital_status: MyString
+  product_category_1: MyString
+  product_category_2: MyString
+  product_category_3: MyString
+  purchase: MyString

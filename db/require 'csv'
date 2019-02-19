@@ -1,0 +1,7 @@
+require 'csv'    
+
+csv_text = File.read('BlackFriday.csv')
+csv = CSV.parse(csv_text, :headers => true)
+csv.each do |row|
+  BlackFriday.create!(row.to_hash.transform_keys{ |key| key.to_s.downcase })
+end

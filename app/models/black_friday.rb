@@ -1,0 +1,2 @@
+class BlackFriday < ApplicationRecord
+end

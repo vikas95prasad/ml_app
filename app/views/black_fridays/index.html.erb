@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Black Fridays</h3>
+<%= link_to 'Back', homes_path, class: "waves-effect waves-light btn" %>
+<%= link_to 'New', new_black_friday_path, class: "waves-effect waves-light btn", style: "float: right;" %>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Product</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Occupation</th>
+      <th>City category</th>
+      <th>Stay in current city years</th>
+      <th>Marital status</th>
+      <th>Product category 1</th>
+      <th>Product category 2</th>
+      <th>Product category 3</th>
+      <th>Purchase</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @black_fridays.each do |black_friday| %>
+      <tr>
+        <td><%= black_friday.user_id %></td>
+        <td><%= black_friday.product_id %></td>
+        <td><%= black_friday.gender %></td>
+        <td><%= black_friday.age %></td>
+        <td><%= black_friday.occupation %></td>
+        <td><%= black_friday.city_category %></td>
+        <td><%= black_friday.stay_in_current_city_years %></td>
+        <td><%= black_friday.marital_status %></td>
+        <td><%= black_friday.product_category_1 %></td>
+        <td><%= black_friday.product_category_2 %></td>
+        <td><%= black_friday.product_category_3 %></td>
+        <td><%= black_friday.purchase %></td>
+        <td><%= link_to 'Show', black_friday, :class=>"waves-effect waves-light btn-small" %></td>
+        <td><%= link_to 'Edit', edit_black_friday_path(black_friday), :class=>"waves-effect waves-light btn-small" %></td>
+        <td><%= link_to 'Destroy', black_friday, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"waves-effect waves-light btn-small" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= will_paginate @black_fridays %>
+
+
+
